@@ -8,6 +8,7 @@ export const NavBar = () => {
             
             <Link className="navbar-brand ms-3" to="/">
                 <img src="docs\assets\pokeapi_256.png" alt="" width="120" height="50" className="d-inline-block align-text-top"></img>
+                {/* <img src="src\assets\pokeapi_256.png" alt="" width="120" height="50" className="d-inline-block align-text-top"></img> */}
             </Link>
 
             <div className="navbar-collapse ">
