@@ -44,7 +44,7 @@ export const PokemonScreen = () => {
                     <button className="btn btn-warning" 
                             onClick={handleReturn} 
                     >
-                        Regresar
+                        Back
                     </button>
                 </div>
 

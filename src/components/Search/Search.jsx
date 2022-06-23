@@ -8,7 +8,7 @@ export const Search = () => {
     const [searchUrl, setSearchUrl] = useState('')
 
     const handleChange = (e) =>{
-        setSearchPokemon(e.target.value);
+        setSearchPokemon(e.target.value.toLowerCase());
     }
 
     const handleSearch = (e)=>{
@@ -40,6 +40,24 @@ export const Search = () => {
                     <label className="text-secondary" 
                     style={{opacity: 0.8}}
                     htmlFor="floatingInput">Search your favorite Pokemon</label>
+
+                    <h6 className="text-sm-start mt-3">For example</h6>
+                    <button className="btn btn-link"
+                        onClick={()=>setSearchPokemon('pikachu')}>
+                        Pikachu
+                    </button>
+                    <button className="btn btn-link"
+                        onClick={()=>setSearchPokemon('charmander')}>
+                        Charmander
+                    </button>
+                    <button className="btn btn-link"
+                        onClick={()=>setSearchPokemon('squirtle')}>
+                        Squirtle
+                    </button>
+                    <button className="btn btn-link"
+                        onClick={()=>setSearchPokemon('bulbasaur')}>
+                        Bulbasaur
+                    </button>
 
                 </div>
             </form>
