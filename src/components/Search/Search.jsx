@@ -8,12 +8,13 @@ export const Search = () => {
     const [searchUrl, setSearchUrl] = useState('')
 
     const handleChange = (e) =>{
+        // setSearchPokemon('');
         setSearchPokemon(e.target.value.toLowerCase());
     }
-
+    
     const handleSearch = (e)=>{
         e.preventDefault();
-
+        
         setSearchUrl(`http://pokeapi.co/api/v2/pokemon/${searchPokemon}`)
         setSearchPokemon('');
     }
@@ -41,25 +42,29 @@ export const Search = () => {
                     style={{opacity: 0.8}}
                     htmlFor="floatingInput">Search your favorite Pokemon</label>
 
-                    <h6 className="text-sm-start mt-3">For example</h6>
-                    <button className="btn btn-link"
-                        onClick={()=>setSearchPokemon('pikachu')}>
-                        Pikachu
-                    </button>
-                    <button className="btn btn-link"
-                        onClick={()=>setSearchPokemon('charmander')}>
-                        Charmander
-                    </button>
-                    <button className="btn btn-link"
-                        onClick={()=>setSearchPokemon('squirtle')}>
-                        Squirtle
-                    </button>
-                    <button className="btn btn-link"
-                        onClick={()=>setSearchPokemon('bulbasaur')}>
-                        Bulbasaur
-                    </button>
 
                 </div>
+                    
+            </form>
+            <form onSubmit={handleSearch}>
+
+                <h6 className="text-sm-start mt-3">For example</h6>
+                        <button className="btn btn-link"
+                            onClick={()=>setSearchPokemon('pikachu')}>
+                            Pikachu
+                        </button>
+                        <button className="btn btn-link"
+                            onClick={()=>setSearchPokemon('charmander')}>
+                            Charmander
+                        </button>
+                        <button className="btn btn-link"
+                            onClick={()=>setSearchPokemon('squirtle')}>
+                            Squirtle
+                        </button>
+                        <button className="btn btn-link"
+                            onClick={()=>setSearchPokemon('bulbasaur')}>
+                            Bulbasaur
+                        </button>
             </form>
 
             {
